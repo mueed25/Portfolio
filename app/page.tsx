@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { Mail, Linkedin, Menu, X, Server, Shield, Zap, Code, Terminal, Activity, AlertTriangle, Users, ArrowRight, Database, Cloud, Layers, Github } from 'lucide-react';
+import { Mail,  Menu, X, Server, Shield, Zap, Code, Terminal, Activity, AlertTriangle, Users, ArrowRight, Database, Cloud, Layers, LinkedinIcon, Linkedin, Github } from 'lucide-react';
 
 const Portfolio = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
