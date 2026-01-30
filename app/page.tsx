@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { Mail,  Menu, X, Server, Shield, Zap, Code, Terminal, Activity, AlertTriangle, Users, ArrowRight, Database, Cloud, Layers, LinkedinIcon, Linkedin, Github } from 'lucide-react';
+import Image from 'next/image';
 
 const Portfolio = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -158,9 +159,7 @@ const Portfolio = () => {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center gap-2 sm:gap-3">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <Terminal className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
-              </div>
+                <Image src="/icon.png" alt="Logo" width={70} height={70} />
               <div>
                 <div className="font-bold text-sm sm:text-lg">Infrastructure Engineer</div>
                 <div className="text-[10px] sm:text-xs text-gray-400">Government-Grade Systems</div>
