@@ -496,9 +496,7 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <Terminal className="w-6 h-6 text-white" />
-              </div>
+              <Image src="/icon.png" alt="Logo" width={70} height={70} />
               <div>
                 <div className="font-bold">Infrastructure Engineer</div>
                 <div className="text-sm text-gray-500">Government-Grade Systems</div>
