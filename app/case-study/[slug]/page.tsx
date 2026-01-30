@@ -5,24 +5,18 @@ import { ArrowLeft, Calendar, Clock, TrendingUp, CheckCircle2, AlertTriangle, X,
 import { caseStudiesData } from '@/lib/caseStudiesData';
 
 const iconMap = {
-  Clock: Clock,
-  TrendingUp: TrendingUp,
-  CheckCircle2: CheckCircle2,
-  AlertTriangle: AlertTriangle,
-  Users: Users,
-  Database: Database,
-  Zap: Zap
-};
+  Clock, TrendingUp, CheckCircle2, AlertTriangle, Users, Database, Zap
+} as const;
 
 const CaseStudyPage = () => {
   const params = useParams();
-  const slug = params?.slug;
+  const slug = typeof params?.slug === 'string' ? params.slug : Array.isArray(params?.slug) ? params.slug[0] : null;
   
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Get case study data from constants
-  const caseStudy = caseStudiesData[slug];
+  // Type-safe access to case study data
+  const caseStudy = slug && slug in caseStudiesData ? caseStudiesData[slug as keyof typeof caseStudiesData] : null;
 
   // If case study not found, show 404
   if (!caseStudy) {
@@ -38,22 +32,16 @@ const CaseStudyPage = () => {
     );
   }
 
-  const openLightbox = (index) => {
+  const openLightbox = (index: number) => {
     setCurrentImageIndex(index);
     setLightboxOpen(true);
   };
 
-  const closeLightbox = () => {
-    setLightboxOpen(false);
-  };
+  const closeLightbox = () => setLightboxOpen(false);
 
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % caseStudy.images.length);
-  };
+  const nextImage = () => setCurrentImageIndex((prev) => (prev + 1) % caseStudy.images.length);
 
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + caseStudy.images.length) % caseStudy.images.length);
-  };
+  const prevImage = () => setCurrentImageIndex((prev) => (prev - 1 + caseStudy.images.length) % caseStudy.images.length);
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -113,7 +101,7 @@ const CaseStudyPage = () => {
           {/* Stats Grid */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {caseStudy.stats.map((stat, idx) => {
-              const IconComponent = iconMap[stat.icon];
+              const IconComponent = iconMap[stat.icon as keyof typeof iconMap];
               return (
                 <div key={idx} className="bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm border border-white/10 rounded-xl p-4 sm:p-6">
                   <div className="text-blue-400 mb-2 sm:mb-3">

@@ -10,7 +10,7 @@ const Portfolio = () => {
 
   useEffect(() => {
     setIsLoaded(true);
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e : any) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     window.addEventListener('mousemove', handleMouseMove);
@@ -131,7 +131,7 @@ const Portfolio = () => {
     ? caseStudies 
     : caseStudies.filter(s => s.category === activeTab);
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id : any) => {
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
