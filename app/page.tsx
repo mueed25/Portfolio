@@ -73,14 +73,14 @@ const Portfolio = () => {
       slug: "nonprofit-platform",
       category: "maintenance",
       client: "European Humanitarian Org",
-      duration: "Ongoing",
+      duration: "6 months",
       impact: "high",
       stats: {
         support: "24/7",
         uptime: "99.9%",
         maintenance: "Active"
       },
-      preview: "Ongoing website management and 24/7 technical support for international humanitarian organization serving communities across Europe.",
+      preview: "website management and 24/7 technical support for international humanitarian organization serving communities across Europe.",
       tags: ["Next.js", "NestJS", "PostgreSQL", "Maintenance"]
     }
   ];
@@ -503,7 +503,7 @@ const Portfolio = () => {
               </div>
             </div>
             <div className="text-gray-500 text-sm">
-              © 2025 All rights reserved • Kano State, Nigeria
+              © 2026 All rights reserved • Kano State, Nigeria
             </div>
           </div>
         </div>
