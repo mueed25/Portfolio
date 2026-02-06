@@ -417,7 +417,7 @@ const Portfolio = () => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Built on Reliability</h2>
             <div className="max-w-3xl space-y-4 sm:space-y-6 text-base sm:text-xl text-gray-400 leading-relaxed">
               <p>
-                I&apos;m a <span className="text-white font-semibold">final-year Mechatronics Engineering student</span> based in Kano State, Nigeria, 
+                I&apos;m a <span className="text-white font-semibold">Mechatronics Engineer </span> based in Kano State, Nigeria, 
                 who builds production infrastructure for organizations that can&apos;t afford failures.
               </p>
               <p>
