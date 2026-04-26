@@ -13,34 +13,47 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DevOps Engineer Portfolio | System Architecture & Infrastructure",
-  description: "Expert DevOps engineer specializing in production systems, incident recovery, and cloud infrastructure. Building resilient systems for organizations that can't afford downtime.",
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon.png", type: "image/png", sizes: "50x50" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
-    apple: [
-      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-  },
+  title: "Muhammad Ayub | Backend & Infrastructure Engineer | NestJS · PostgreSQL · DevOps",
+  description: "Backend and Infrastructure Engineer with 5+ years building production systems for Nigerian government agencies and international organizations. NestJS, Next.js, PostgreSQL, DevOps, crisis recovery specialist. Available for remote contracts globally.",
+  keywords: [
+    "Backend Engineer Nigeria",
+    "NestJS Developer",
+    "Infrastructure Engineer",
+    "DevOps Engineer Nigeria",
+    "PostgreSQL Developer",
+    "Government Systems Nigeria",
+    "Remote Backend Developer",
+    "Production Systems Engineer",
+    "Crisis Recovery Engineer",
+    "Full Stack Engineer Nigeria"
+  ],
+  authors: [{ name: "Muhammad Ayub", url: "https://mmueed.online" }],
+  creator: "Muhammad Ayub",
+  metadataBase: new URL("https://mmueed.online"),
   openGraph: {
-    title: "DevOps Engineer Portfolio",
-    description: "Expert in production systems and infrastructure",
-    url: "https://yourwebsite.com",
-    siteName: "DevOps Portfolio",
+    title: "Muhammad Ayub | Backend & Infrastructure Engineer",
+    description: "Building production systems for government agencies and international organizations. NestJS · PostgreSQL · DevOps · Crisis Recovery.",
+    url: "https://mmueed.online",
+    siteName: "Muhammad Ayub — Infrastructure Engineer",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DevOps Engineer Portfolio",
-    description: "Expert in production systems and infrastructure",
+    title: "Muhammad Ayub | Backend & Infrastructure Engineer",
+    description: "Building production systems for government agencies and international organizations. NestJS · PostgreSQL · DevOps.",
+    creator: "@mueed25",
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  alternates: {
+    canonical: "https://mmueed.online",
   },
 };
 
@@ -53,6 +66,33 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Muhammad Ayub",
+      "jobTitle": "Backend & Infrastructure Engineer",
+      "url": "https://mmueed.online",
+      "email": "mueedmuhammad605@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kano",
+        "addressCountry": "Nigeria"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/muhammedayub-dev",
+        "https://github.com/mueed25"
+      ],
+      "knowsAbout": [
+        "NestJS", "PostgreSQL", "DevOps", 
+        "Infrastructure Engineering", "Crisis Recovery",
+        "Next.js", "React Native", "Docker"
+      ]
+    })
+  }}
+/>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

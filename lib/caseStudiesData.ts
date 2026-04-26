@@ -331,8 +331,8 @@ export const caseStudiesData = {
   "nonprofit-platform": {
     title: "International Nonprofit Platform: Ongoing Operations & Support",
     client: "European Humanitarian Organization",
-    duration: "Ongoing",
-    role: "Direct Contractor (Full-Stack + Infrastructure)",
+    duration: "6months",
+    role: "Subcontracted (Full-Stack + Infrastructure)",
     impact: "high",
     category: "Maintenance & Support",
     date: "2024 - Present",

@@ -465,7 +465,8 @@ const Portfolio = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Let&apos;s Work Together</h2>
           <p className="text-base sm:text-xl text-gray-400 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-            Currently taking on select projects for Nigerian businesses and African startups that need government-grade infrastructure.
+           Currently available for remote contracts globally — 
+startups and organizations that need production-grade reliability.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 sm:mb-12">
